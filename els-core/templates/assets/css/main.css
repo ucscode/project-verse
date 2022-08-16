@@ -1,0 +1,17 @@
+/* Main: */
+
+@import url("fonts/lora/style.css");
+
+body {
+	font-family: lora;
+}
+
+header {
+	top: 0;
+	z-index: 10;
+}
+
+.aside {
+	top: 5.5rem;
+}
+
