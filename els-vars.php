@@ -1,4 +1,4 @@
-<?php 
+<?php defined("ROOT_DIR") or die;
 
 $Config = new class {
 	public function __get( $key ) {
