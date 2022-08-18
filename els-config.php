@@ -1,4 +1,4 @@
-<?php 
+<?php defined("ROOT_DIR") or die;
 
 # -- [ ELS-CORE DIRECTORY ] --
 
