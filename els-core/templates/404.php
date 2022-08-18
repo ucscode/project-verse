@@ -1,3 +1,5 @@
+<?php defined("ROOT_DIR") or die; ?>
+
 <div class="px-4 py-4 my-4 text-center">
 
 	<?php if( empty(core::slug()) ): ?>

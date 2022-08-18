@@ -1,3 +1,5 @@
+<?php defined("ROOT_DIR") or die; ?>
+
 	<?php if( !$page->blank ): ?>
 	
 				<?php if( $page->sidebar ): ?>

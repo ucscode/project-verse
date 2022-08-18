@@ -1,3 +1,4 @@
+<?php defined("ROOT_DIR") or die; ?>
 <header class="text-bg-dark position-sticky">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
 		<div class="container">
