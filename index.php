@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 define("ROOT_DIR", str_replace("\\", "/", __DIR__));
 
 require ROOT_DIR . '/els-config.php';
