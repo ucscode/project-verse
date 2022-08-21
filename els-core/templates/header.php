@@ -40,6 +40,10 @@
 	
 	<?php else: ?>
 	
-		<?php ($page->content)(); ?>
+		<?php 
+			events::exec("-blank@content:before");
+			($page->content)(); 
+			events::exec("-blank@content:after");
+		?>
 			
 	<?php endif; ?>
