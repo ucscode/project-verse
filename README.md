@@ -122,7 +122,9 @@ $Menu->add_submenu("menukey", "submenu-2", array(
 ));
 ```
 
-The easiest way to make a menu active is base on the current url is to use the code ```active => (core::slug() == 'login')```. So if the request uri is www.domain.com/login, then the menu item will be active.
+The easiest way to make a menu active base on the current URL is to use the code: 
+```active => (core::slug() == 'login')``` 
+So if the REQUEST URI is www.domain.com/login, then the login menu item will be active.
 
 ##### Add a script before &lt;/head&gt; tag
 
