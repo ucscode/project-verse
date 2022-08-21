@@ -23,11 +23,13 @@ To register a page, you must create a ```new stdClass()``` instance, assign prop
 
 ```php
 <?php 
-	$homepage = new stdClass();
-	$homepage->content = function() {
-		echo 'welcome to the homepage';
-	};
-	Temp::register(null, $homepage);
+
+$homepage = new stdClass();
+$homepage->content = function() {
+	echo 'welcome to the homepage';
+};
+
+Temp::register(null, $homepage);
 ```
 
 Now if you write the above code into the index file of your project, when ever people visit www.domain.com, they will see ***"Welcome to the homepage".***
@@ -36,11 +38,13 @@ Now if you write the above code into the index file of your project, when ever p
 
 ```php
 <?php 
-	$accountpage = new stdClass();
-	$accountpage->content = function() {
-		echo "<h3 class='text-center fw-bold'>You must contact the admin to register</h3>"
-	};
-	Temp::register("account", $accountpage);
+
+$accountpage = new stdClass();
+$accountpage->content = function() {
+	echo "<h3 class='text-center fw-bold'>You must contact the admin to register</h3>"
+};
+
+Temp::register("account", $accountpage);
 ```
 
 Now if your write the above code into the index file of your project, whenever www.domain.com is visited, you will see a bold text saying ***"You must contact the admin to register".***
