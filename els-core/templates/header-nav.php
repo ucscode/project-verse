@@ -71,7 +71,13 @@
 				
 				<?php if( $page->nav_search ?? true ): ?>
 					<form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-						<input type="search" name='search' class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+						<input type="search" name='search' class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search" value='<?php echo $_GET['search'] ?? ''; ?>'>
+						<?php 
+							foreach( $_GET as $name => $value ): 
+								if( $name == 'search' ) continue;
+						?>
+						<input type='hidden' name='<?php echo $name; ?>' value="<?php echo $value; ?>">
+						<?php endforeach; ?>
 					</form>
 				<?php endif; ?>
 				
