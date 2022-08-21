@@ -27,7 +27,7 @@
 		<main class='container-fluid py-4'>
 			<div class='row'>
 			
-				<div class='<?php echo $page->sidebar ? 'col-lg-8' : 'col-lg-12'; ?>'>
+				<div class='mb-5 <?php echo $page->sidebar ? 'col-lg-8' : 'col-lg-12'; ?>'>
 					<?php ($page->content)(); ?>
 				</div>
 	
