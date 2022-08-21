@@ -24,11 +24,18 @@
 		<?php events::exec("@main:before"); ?>
 		
 		<!------ [ MAIN ] -------->
-		<main class='container-fluid py-4'>
-			<div class='row'>
+		<main class='container-fluid py-2'>
+		
+			<?php events::exec("@main:start"); ?>
+			
+			<div class='row my-2'>
 			
 				<div class='mb-5 <?php echo $page->sidebar ? 'col-lg-8' : 'col-lg-12'; ?>'>
-					<?php ($page->content)(); ?>
+					<?php 
+						events::exec("@content:before");
+						($page->content)(); 
+						events::exec("@content:after");
+					?>
 				</div>
 	
 	<?php else: ?>
