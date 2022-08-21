@@ -1,12 +1,14 @@
-# project-verse
+# project-verve
 A simple &amp; powerful project development system
 
-Project verse is a framework for project development simplicity. It helps developer speed up the rate at which they need to design a platform. Project verse contains only Bootstrap, JQuery and FontAwesome making it a light easy to manage framework.
+![Project Verve Overview](https://i.imgur.com/z2xxIEj.png "Project verve overview")
+
+Project verve is a framework for project development simplicity. It helps developer speed up the rate at which they need to design a platform. Project verve contains only Bootstrap, JQuery and FontAwesome making it a light easy to manage framework.
 
 ### Project Initialization
 
-- Create a new folder like "els-content/your-project"
-- Create an index file like "els-content/your-project/index.php"
+- Create a new folder - ```els-content/your-project```
+- Create an index file - ```els-content/your-project/index.php```
 - In the index file, you can write your code, require other file, install larger libraries etc... to develop your project
 
 ### Basic Usage
