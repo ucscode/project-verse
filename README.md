@@ -157,6 +157,32 @@ ___
 
 ![Project Verve Vidi Admin](https://i.imgur.com/XnSjn2z.png)
 
+___
+
+
+### Need an advance user management system?
+
+Try [User Synthetics](https://github.com/ucscode/user-synthetics "A Profession User Management System")
+
+
+## AUTHOR
+
+**Uchenna Ajah**
+
+## DONATE
+
+*If you appreciate this project, donate some crypto coin to the developer*
+
+**BTC:** 3KPCPLvqarpRdpYyNUKzExsFwdzeprhK7B
+
+**ETH:** 0xa873A81f63C6D4FD976C601dEB75b59c3Cb94fac
+
+## FOLLOW ON
+
+[Facebook](https://facebook.com/ucscode)
+
+[YouTube](https://www.youtube.com/channel/UCPlGBkdI0ydlgAZWoLdmOFg)
+
 
 
 
