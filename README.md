@@ -167,7 +167,7 @@ Try [User Synthetics](https://github.com/ucscode/user-synthetics "A Profession U
 
 ## AUTHOR
 
-***UCHENNA AJAH - UCSCODE***
+***UCHENNA AJAH (UCSCODE)***
 
 ## DONATE
 
