@@ -11,13 +11,13 @@ Project verse is a framework for project development simplicity. It helps develo
 
 ### Basic Usage
 
-By default, all request are sent to the root "/index.php" and will always return a 404 Error. To begin, you must register a page.
-For example, you domain is www.domain.com, when a person visits www.domain.com, a 404 error will be returned because you have not registered the homepage.
-If a person visits www.domain.com/account, same 404 error will be returned because you have not registered the "/account" page.
+By default, all request are sent to the root "/index.php" and will always return a 404 Error.\
+For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be returned because you have not registered the homepage.\
+Similarly, if a person visits www.domain.com/account, same 404 error will be returned because you have not registered the "account" page.
 
-To register a page, you must create a new stdClass() instance, assign properties to it, and then register it. 
+To register a page, you must create a ```new stdClass()``` instance, assign properties to it, and then register it. 
 
-Example - www.domain.com
+##### Example - www.domain.com
 
 ```php
 <?php 
@@ -28,9 +28,9 @@ Example - www.domain.com
 	Temp::register(null, $homepage);
 ```
 
-Now if you write the above code into the index file of your project, when ever people visit www.domain.com, the will see "Welcome to the homepage".
+Now if you write the above code into the index file of your project, when ever people visit www.domain.com, they will see ***"Welcome to the homepage".***
 
-Example - www.domain.com/account
+##### Example - www.domain.com/account
 
 ```php
 <?php 
@@ -41,11 +41,12 @@ Example - www.domain.com/account
 	Temp::register("account", $accountpage);
 ```
 
-Now if your write the above code into the index file of your project, whenever www.domain.com is visited, you will see a bold text saying "You must contact the admin to register".
+Now if your write the above code into the index file of your project, whenever www.domain.com is visited, you will see a bold text saying ***"You must contact the admin to register".***
+
 
 The navigation bar and sidebar will all be present. But if you don't want them, you can set more option to the stdClass instance.
 
-Example - www.domain.com/admin/login
+##### Example - www.domain.com/admin/login
 
 ```php
 <?php 
@@ -57,7 +58,8 @@ Example - www.domain.com/admin/login
 	Temp::register("admin/login", $adminLogin);
 ```
 
-Example - www.domain.com/account/fullpage/notification
+
+##### Example - www.domain.com/account/fullpage/notification
 
 ```php
 <?php
@@ -66,11 +68,12 @@ Example - www.domain.com/account/fullpage/notification
 	Temp::register("account/fullpage/notification", $fullpage);
 ```
 
-When a user visit the registered page, it will display a fullpage without sidebar (and without content since '$fullpage->content' method wasn't added)
+When a user visit the registered page, it will display a fullpage without sidebar (and without content since '$fullpage->content' method was not added)
 
-### CheatSheets
 
-###### Add a script before </head> tag
+## CheatSheets
+
+###### Add a script before &lg;/head&tg; tag
 
 ```php
 <?php
@@ -106,10 +109,10 @@ When a user visit the registered page, it will display a fullpage without sideba
 	});
 ```
 
-###### Get the REQUEST_URI after domainname
+###### Get the REQUEST_URI after Domain Name
 
 ```php
-	// accessing www.domain.com/request-uri/name
+// - www.domain.com/request-uri/name
 <?php
 	echo core::slug(); // request-uri/name
 ```
@@ -117,7 +120,7 @@ When a user visit the registered page, it will display a fullpage without sideba
 ###### Convert SERVER PATH to URL PATH
 
 ```php
-	// C:/your/root-directory/public-html/the-content/image.jpg
+// - C:/your/root-directory/public-html/the-content/image.jpg
 <?php
 	echo core::url( __DIR__ . '/image.jpg' ); // https://the-content/image.jpg
 ```
@@ -125,3 +128,7 @@ When a user visit the registered page, it will display a fullpage without sideba
 ### PROJECT REAL-LIFE SAMPLE
 
 ***DESIGNED A VIDEO CMS SYSTEM***
+
+
+
+
