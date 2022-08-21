@@ -19,7 +19,7 @@ By default, all request are sent to the root "/index.php" and will always return
 
 For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be displayed because you have not registered the ```home``` page.
 
-Similarly, if a person visits another page like www.domain.com/account, same 404 error will be displayed because you have not registered the "```account```" page.
+Similarly, if a person visits another page like www.domain.com/account, same 404 error will be displayed because you have not registered the ```account``` page.
 
 To register a page, you must create a ```new stdClass()``` instance, assign some properties to it, and pass it to ```Temp::register``` method. 
 
@@ -93,6 +93,36 @@ When a user visit the above registered page, it will display a fullpage without 
 
 
 ## CheatSheets
+
+##### Add an item to the menu
+
+```php
+<?php
+
+$Menu->add("menukey", array(
+	"label" => "Account",
+	"link" => core::url() . '/account'
+));
+```
+
+##### Add a submenu item to the menu
+
+```php
+<?php
+
+$Menu->add_submenu("menukey", "submenu-1", array(
+	"label" => "Register",
+	"link" => core::url() . '/register'
+));
+
+$Menu->add_submenu("menukey", "submenu-2", array(
+	"label" => "Login",
+	"link" => core::url() . '/login',
+	"active" => true // To select this menu
+));
+```
+
+The easiest way to make a menu active is base on the current url is to use the code ```active => (core::slug() == 'login')```. So if the request uri is www.domain.com/login, then the menu item will be active.
 
 ##### Add a script before &lt;/head&gt; tag
 
