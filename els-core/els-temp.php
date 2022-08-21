@@ -6,13 +6,16 @@ class Temp {
 	
 	const LOGO = TEMP_DIR . '/assets/images/origin.png';
 	
+	private static $homekey = __class__ . '#BY-UCSCODE@2022!PRO';
+	
 	public static function output() {
 		$page = self::pageInURI();
 		require TEMP_DIR . '/header.php';
 		require TEMP_DIR . '/footer.php';
 	}
 	
-	public static function register( string $slug, object $page ) {
+	public static function register( ?string $slug, object $page ) {
+		if( is_null($slug) ) $slug = self::$homekey;
 		self::$pages[ $slug ] = $page;
 	}
 	
@@ -22,7 +25,7 @@ class Temp {
 	
 	protected static function pageInURI() {
 		$slug = core::slug();
-		if( empty($slug) ) $slug = 'home';
+		if( empty($slug) ) $slug = self::$homekey;
 		$page = self::$pages[ $slug ] ?? null;
 		if( !$page ) {
 			$page = new stdClass();
