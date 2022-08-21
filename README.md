@@ -167,11 +167,11 @@ Try [User Synthetics](https://github.com/ucscode/user-synthetics "A Profession U
 
 ## AUTHOR
 
-**Uchenna Ajah**
+***UCHENNA AJAH - UCSCODE***
 
 ## DONATE
 
-*If you appreciate this project, donate some crypto coin to the developer*
+*If you appreciate this project, donate some cryptocurrency to the developer*
 
 **BTC:** 3KPCPLvqarpRdpYyNUKzExsFwdzeprhK7B
 
