@@ -11,13 +11,15 @@ Project verse is a framework for project development simplicity. It helps develo
 
 ### Basic Usage
 
-By default, all request are sent to the root "/index.php" and will always return a 404 Error.\
-For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be returned because you have not registered the homepage.\
+By default, all request are sent to the root "/index.php" and will always return a 404 Error.
+
+For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be returned because you have not registered the homepage.
+
 Similarly, if a person visits www.domain.com/account, same 404 error will be returned because you have not registered the "account" page.
 
 To register a page, you must create a ```new stdClass()``` instance, assign properties to it, and then register it. 
 
-##### Example - www.domain.com
+#### Example - www.domain.com
 
 ```php
 <?php 
@@ -30,7 +32,7 @@ To register a page, you must create a ```new stdClass()``` instance, assign prop
 
 Now if you write the above code into the index file of your project, when ever people visit www.domain.com, they will see ***"Welcome to the homepage".***
 
-##### Example - www.domain.com/account
+#### Example - www.domain.com/account
 
 ```php
 <?php 
@@ -44,86 +46,98 @@ Now if you write the above code into the index file of your project, when ever p
 Now if your write the above code into the index file of your project, whenever www.domain.com is visited, you will see a bold text saying ***"You must contact the admin to register".***
 
 
-The navigation bar and sidebar will all be present. But if you don't want them, you can set more option to the stdClass instance.
+The navigation bar and sidebar will all be present.\
+But if you don't want them, you can set more option to the stdClass instance.
 
-##### Example - www.domain.com/admin/login
+#### Example - www.domain.com/admin/login
 
 ```php
 <?php 
-	$adminLogin = new stdClass();
-	$adminLogin->blank = true;
-	$adminLogin->content = function() {
-		include 'login-codes.html'
-	}
-	Temp::register("admin/login", $adminLogin);
+
+$adminLogin = new stdClass();
+$adminLogin->blank = true;
+$adminLogin->content = function() {
+	include 'login-codes.html'
+}
+
+Temp::register("admin/login", $adminLogin);
 ```
 
 
-##### Example - www.domain.com/account/fullpage/notification
+#### Example - www.domain.com/account/fullpage/notification
 
 ```php
 <?php
-	$fullpage = new stdClass();
-	$fullpage->sidebar = false;
-	Temp::register("account/fullpage/notification", $fullpage);
+
+$fullpage = new stdClass();
+$fullpage->sidebar = false;
+
+Temp::register("account/fullpage/notification", $fullpage);
 ```
 
-When a user visit the registered page, it will display a fullpage without sidebar (and without content since '$fullpage->content' method was not added)
+When a user visit the registered page, it will display a fullpage without sidebar (and without content since ```$fullpage->content``` method was not added)
 
 
 ## CheatSheets
 
-###### Add a script before &lg;/head&tg; tag
+##### Add a script before &lt;/head&gt; tag
 
 ```php
 <?php
-	events::addListener("@header:end", function() {
-		echo "<link rel='stylesheet' href='your-custom-style.css'>";
-	});
+
+events::addListener("@header:end", function() {
+	echo "<link rel='stylesheet' href='your-custom-style.css'>";
+});
 ```
 
-###### Add a script at footer
+##### Add a script at footer
 
 ```php
 <?php
-	events::addListener("@footer:end", function() {
-		echo "<script type='text/javascript' src='your-custom-script.js'></script>";
-	});
+
+events::addListener("@footer:end", function() {
+	echo "<script type='text/javascript' src='your-custom-script.js'></script>";
+});
 ```
 
-###### Add content to sidebar
+##### Add content to sidebar
 
 ```php
 <?php
-	events::addListener("@sidebar", function() {
-		echo "Please Advertise Here!";
-	});
+
+events::addListener("@sidebar", function() {
+	echo "Please Advertise Here!";
+});
 ```
 
-###### Show a banner at the top of every page before content
+##### Show a banner at the top of every page before content
 
 ```php
 <?php
-	events::addListener("/content:before", function() {
-		echo "This is a 320 x 250 banner";
-	});
+
+events::addListener("/content:before", function() {
+	echo "This is a 320 x 250 banner";
+});
 ```
 
-###### Get the REQUEST_URI after Domain Name
+##### Get the REQUEST_URI after Domain Name
 
 ```php
-// - www.domain.com/request-uri/name
+// www.domain.com/request-uri/name
+
 <?php
-	echo core::slug(); // request-uri/name
+echo core::slug(); // request-uri/name
 ```
 
-###### Convert SERVER PATH to URL PATH
+##### Convert SERVER PATH to URL PATH
 
 ```php
-// - C:/your/root-directory/public-html/the-content/image.jpg
+// C:/your/root-directory/public-html/the-content/image.jpg
+
 <?php
-	echo core::url( __DIR__ . '/image.jpg' ); // https://the-content/image.jpg
+echo core::url( __DIR__ . '/image.jpg' ); // https://the-content/image.jpg
 ```
+
 
 ### PROJECT REAL-LIFE SAMPLE
 
