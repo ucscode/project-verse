@@ -9,7 +9,7 @@ Project verve is a framework for project development simplicity. It helps develo
 
 - Create a new folder - ```els-content/your-project```
 - Create an index file - ```els-content/your-project/index.php```
-- In the index file, you can write your code, require other file, install larger libraries etc... to develop your project
+- In the index file, you can write your code, include other file, install larger libraries etc... to develop your project
 
 ### Basic Usage
 
@@ -17,11 +17,11 @@ By default, all request are sent to the root "/index.php" and will always return
 
 ![PV 404](https://i.imgur.com/lGqc4mh.png "Project Verve 404 Display")
 
-For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be returned because you have not registered the homepage.
+For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be displayed because you have not registered the ```home``` page.
 
-Similarly, if a person visits www.domain.com/account, same 404 error will be returned because you have not registered the "account" page.
+Similarly, if a person visits another page like www.domain.com/account, same 404 error will be displayed because you have not registered the "```account```" page.
 
-To register a page, you must create a ```new stdClass()``` instance, assign properties to it, and then register it. 
+To register a page, you must create a ```new stdClass()``` instance, assign some properties to it, and pass it to ```Temp::register``` method. 
 
 #### Example - www.domain.com
 
@@ -29,6 +29,7 @@ To register a page, you must create a ```new stdClass()``` instance, assign prop
 <?php 
 
 $homepage = new stdClass();
+
 $homepage->content = function() {
 	echo 'welcome to the homepage';
 };
@@ -36,7 +37,7 @@ $homepage->content = function() {
 Temp::register(null, $homepage);
 ```
 
-Now if you write the above code into the index file of your project, when ever people visit www.domain.com, they will see ***"Welcome to the homepage".***
+Now if you write the above code into the ```index.php``` file of your project directory, whenever www.domain.com is visited, you will see ***"Welcome to the homepage".***
 
 #### Example - www.domain.com/account
 
@@ -44,6 +45,7 @@ Now if you write the above code into the index file of your project, when ever p
 <?php 
 
 $accountpage = new stdClass();
+
 $accountpage->content = function() {
 	echo "<h3 class='text-center fw-bold'>You must contact the admin to register</h3>"
 };
@@ -51,7 +53,7 @@ $accountpage->content = function() {
 Temp::register("account", $accountpage);
 ```
 
-Now if your write the above code into the index file of your project, whenever www.domain.com is visited, you will see a bold text saying ***"You must contact the admin to register".***
+Now if your write the above code into the ```index.php``` file of your project directory, whenever www.domain.com/account is visited, you will see a bold text saying ***"You must contact the admin to register".***
 
 
 The navigation bar and sidebar will all be present.\
@@ -63,14 +65,17 @@ But if you don't want them, you can set more option to the stdClass instance.
 <?php 
 
 $adminLogin = new stdClass();
+
 $adminLogin->blank = true;
+
 $adminLogin->content = function() {
-	include 'login-codes.html'
+	include 'login-codes.html';
 }
 
 Temp::register("admin/login", $adminLogin);
 ```
 
+The above will be a blank page containing whatever is in the ```login-codes.html``` file
 
 #### Example - www.domain.com/account/fullpage/notification
 
@@ -78,12 +83,13 @@ Temp::register("admin/login", $adminLogin);
 <?php
 
 $fullpage = new stdClass();
+
 $fullpage->sidebar = false;
 
 Temp::register("account/fullpage/notification", $fullpage);
 ```
 
-When a user visit the registered page, it will display a fullpage without sidebar (and without content since ```$fullpage->content``` method was not added)
+When a user visit the above registered page, it will display a fullpage without sidebar (and also without content since no ```function``` was assigned to ```$fullpage->content```)
 
 
 ## CheatSheets
