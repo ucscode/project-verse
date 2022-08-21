@@ -32,18 +32,18 @@
 			
 				<div class='mb-5 <?php echo $page->sidebar ? 'col-lg-8' : 'col-lg-12'; ?>'>
 					<?php 
-						events::exec("@content:before");
+						events::exec("/content:before");
 						($page->content)(); 
-						events::exec("@content:after");
+						events::exec("/content:after");
 					?>
 				</div>
 	
 	<?php else: ?>
 	
 		<?php 
-			events::exec("-blank@content:before");
+			events::exec("-blank/content:before");
 			($page->content)(); 
-			events::exec("-blank@content:after");
+			events::exec("-blank/content:after");
 		?>
 			
 	<?php endif; ?>
