@@ -15,6 +15,8 @@ Project verve is a framework for project development simplicity. It helps develo
 
 By default, all request are sent to the root "/index.php" and will always return a 404 Error.
 
+![PV 404](https://i.imgur.com/lGqc4mh.png "Project Verve 404 Display")
+
 For example, your domain is www.domain.com, when a person visits www.domain.com, a 404 error will be returned because you have not registered the homepage.
 
 Similarly, if a person visits www.domain.com/account, same 404 error will be returned because you have not registered the "account" page.
@@ -147,7 +149,15 @@ echo core::url( __DIR__ . '/image.jpg' ); // https://the-content/image.jpg
 
 ### PROJECT REAL-LIFE SAMPLE
 
-***DESIGNED A VIDEO CMS SYSTEM***
+***A VIDEO SHARING SYSTEM DESIGNED WITH PROJECT VERVE***
+
+![Project Verve Vidi](https://i.imgur.com/uS1CcjJ.png)
+
+___
+
+![Project Verve Vidi Admin](https://i.imgur.com/XnSjn2z.png)
+
+
 
 
 
