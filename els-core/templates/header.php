@@ -30,7 +30,7 @@
 			
 			<div class='row my-2'>
 			
-				<div class='mb-5 <?php echo $page->sidebar ? 'col-lg-8' : 'col-lg-12'; ?>'>
+				<div class='mb-5 --content <?php echo ($page->content_class ?? null) . " " . ($page->sidebar ? 'col-lg-8' : 'col-lg-12'); ?>'>
 					<?php 
 						events::exec("/content:before");
 						($page->content)(); 
