@@ -3,7 +3,7 @@
 	<?php if( !$page->blank ): ?>
 	
 				<?php if( $page->sidebar ): ?>
-					<div class='col-lg-4 <?php echo ($page->sidebar_class ?? null); ?>'>
+					<div class='<?php echo $page->sidebar_class; ?>'>
 						<div class='position-sticky aside'>
 							<div class='border p-2 sidebar'>
 								<?php events::exec('@sidebar'); ?>
