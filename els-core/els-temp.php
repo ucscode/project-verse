@@ -36,6 +36,18 @@ class Temp {
 		};
 		$page->sidebar = !!($page->sidebar ?? true);
 		$page->blank = !!($page->blank ?? false);
+		## sidebar class inplant
+		$columns = array(
+			'content_class' => ' col-lg-9', 
+			'sidebar_class' => ' col-lg-3'
+		);
+		array_walk($columns, function($class, $key) use(&$page) {
+			if( empty($page->{$key}) ) $page->{$key} = '';
+			if( !preg_match("/col\-(\w{2}\-)?\d+/", ($page->{$key} ?? '')) ) {
+				$page->{$key} .= ($page->sidebar) ? $class : " col-lg-12";
+				$page->{$key} = trim($page->{$key});
+			};
+		});
 		if( !isset($page->content) || !is_callable($page->content) ) $page->content = function(){};
 		return $page;
 	}
