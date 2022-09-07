@@ -4,7 +4,7 @@
 
 	<?php if( empty(core::slug()) ): ?>
 	
-		<img class="d-block mx-auto mb-4" src="<?php echo core::url( Temp::LOGO ); ?>" alt="" width="72">
+		<img class="d-block mx-auto mb-4" src="<?php echo core::url( Temp::$LOGO ); ?>" alt="" width="72">
 	
 		<h1 class="display-6 fw-bold mb-3">Welcome To</h1>
 		<div class="col-lg-6 mx-auto">
