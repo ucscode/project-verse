@@ -4,7 +4,7 @@ class Temp {
 	
 	protected static $pages = [];
 	
-	const LOGO = TEMP_DIR . '/assets/images/origin.png';
+	public static $LOGO = TEMP_DIR . '/assets/images/origin.png';
 	
 	private static $homekey = __class__ . '#BY-UCSCODE@2022!PRO';
 	
