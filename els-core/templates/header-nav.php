@@ -3,7 +3,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
 		<div class="container">
 			<a class="navbar-brand" href="<?php echo core::url(); ?>">
-				<img src='<?php echo core::url( self::LOGO ); ?>' width="40" role="img" aria-label="Bootstrap">
+				<img src='<?php echo core::url( self::$LOGO ); ?>' width="40" role="img" aria-label="Bootstrap">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

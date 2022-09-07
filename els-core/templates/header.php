@@ -5,7 +5,7 @@
 <head>
 	<?php events::exec("@header:start"); ?>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='icon' href='<?php echo core::url( self::LOGO ); ?>'>
+	<link rel='icon' href='<?php echo core::url( self::$LOGO ); ?>'>
 	<link rel='stylesheet' href='<?php echo core::url( TEMP_DIR . '/assets/vendor/bootstrap-5.2.0/css/bootstrap.min.css' ); ?>'>
 	<link rel='stylesheet' href='<?php echo core::url( TEMP_DIR . '/assets/vendor/font-awesome-5.8.2/css/all.css' ); ?>'>
 	<link rel='stylesheet' href='<?php echo core::url( TEMP_DIR . '/assets/css/main.css' ); ?>'>
