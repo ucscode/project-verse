@@ -36,7 +36,7 @@ abstract class abs_core {
 	
 	# [ ARRAY TO ATTR ] 
 	
-	public function array_to_html_attrs( array $array ) {
+	public static function array_to_html_attrs( array $array ) {
 		return implode(" ", array_map(function($key, $value) {
 			if( is_array($value) ) $value = implode(",", $value);
 			return "{$key}=\"{$value}\"";
