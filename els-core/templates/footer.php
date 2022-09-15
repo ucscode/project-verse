@@ -32,6 +32,7 @@
 	<?php events::exec("@footer:start"); ?>
 	<script src='<?php echo core::url( TEMP_DIR . '/assets/vendor/bootstrap-5.2.0/js/bootstrap.bundle.min.js' ); ?>'></script>
 	<script src='<?php echo core::url( TEMP_DIR . '/assets/vendor/jquery-3.4.1.min.js' ); ?>'></script>
+	<script src='<?php echo core::url( TEMP_DIR . '/assets/js/main.js' ); ?>'></script>
 	<?php 
 		events::exec("@footer:end"); 
 		events::exec("@body:end"); 

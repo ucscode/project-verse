@@ -1,15 +1,21 @@
 <?php defined("ROOT_DIR") or die; ?>
+
 <header class="text-bg-dark position-sticky">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Fifth navbar example">
 		<div class="container">
+		
 			<a class="navbar-brand" href="<?php echo core::url(); ?>">
 				<img src='<?php echo core::url( self::$LOGO ); ?>' width="40" role="img" aria-label="Bootstrap">
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			
+			<button class="navbar-toggler hamburger hamburger--spin" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon d-none"></span>
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarsExample05">
+			<div class="collapse navbar-collapse" id="navbars">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<?php
 					
