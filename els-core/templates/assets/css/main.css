@@ -290,10 +290,18 @@ header {
 }
 
 .hamburger-box {
-	width: 26px;
+	width: 24px;
 }
 
 .hamburger {
 	padding: 8px;
 	line-height: 0;
+}
+
+.hamburger-inner:before {
+    top: -7px;
+}
+
+.hamburger-inner:after {
+    bottom: -7px;
 }
