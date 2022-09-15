@@ -1,6 +1,41 @@
 /* Main: */
 
 @import url("fonts/lora/style.css");
+@import url("hamburgers.min.css");
+
+/*
+hamburger--3dx
+hamburger--3dx-r
+hamburger--3dy
+hamburger--3dy-r
+hamburger--3dxy
+hamburger--3dxy-r
+hamburger--arrow
+hamburger--arrow-r
+hamburger--arrowalt
+hamburger--arrowalt-r
+hamburger--arrowturn
+hamburger--arrowturn-r
+hamburger--boring
+hamburger--collapse
+hamburger--collapse-r
+hamburger--elastic
+hamburger--elastic-r
+hamburger--emphatic
+hamburger--emphatic-r
+hamburger--minus
+hamburger--slider
+hamburger--slider-r
+hamburger--spin
+hamburger--spin-r
+hamburger--spring
+hamburger--spring-r
+hamburger--stand
+hamburger--stand-r
+hamburger--squeeze
+hamburger--vortex
+hamburger--vortex-r
+*/
 
 body {
 	font-family: lora;
@@ -230,4 +265,35 @@ header {
 }	
 .fs-79 {
 	font-size: 79px;
-}	
+}
+
+.navbar-toggler {
+	font-size: 0.9rem;
+    border: 0;
+	border-radius: 2px;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.hamburger-inner, 
+.hamburger-inner:after, 
+.hamburger-inner:before,
+.hamburger.is-active .hamburger-inner, 
+.hamburger.is-active .hamburger-inner:after, 
+.hamburger.is-active .hamburger-inner:before {
+	background-color: var(--bs-gray-400);
+	width: 26px;
+    height: 1px;
+}
+
+.hamburger-box {
+	width: 26px;
+}
+
+.hamburger {
+	padding: 8px;
+	line-height: 0;
+}
