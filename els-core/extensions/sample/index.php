@@ -50,5 +50,5 @@ $homepage->content = function() { ?>
 	If you uncommented any of the above line, uncomment the one below too 
 */
 
-# Temp::register('home', $homepage);
+# Temp::register(null, $homepage);
 
