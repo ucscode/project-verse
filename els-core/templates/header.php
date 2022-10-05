@@ -24,13 +24,13 @@
 		<?php events::exec("@main:before"); ?>
 		
 		<!------ [ MAIN ] -------->
-		<main class='container-fluid py-2'>
+		<main class='container-fluid'>
 		
 			<?php events::exec("@main:start"); ?>
 			
-			<div class='row my-2'>
+			<div class='row'>
 			
-				<div class='mb-5 --content <?php echo $page->content_class; ?>'>
+				<div class='mb-5 --content p-0 <?php echo $page->content_class; ?>'>
 					<?php 
 						events::exec("/content:before");
 						($page->content)(); 
