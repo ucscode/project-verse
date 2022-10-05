@@ -20,6 +20,8 @@ require CLASS_DIR . '/core.php';
 require CLASS_DIR . '/events.php';
 require CLASS_DIR . '/datamemo.php';
 require CLASS_DIR . '/menufy.php';
+require CLASS_DIR . '/sQuery.php';
+require CLASS_DIR . '/pairs.php';
 
 
 # -- [ GET TEMPLATE DATA ] --
