@@ -15,7 +15,7 @@ class Temp {
 	}
 	
 	public static function register( ?string $slug, object $page ) {
-		if( is_null($slug) ) $slug = self::$homekey;
+		if( empty($slug) ) $slug = self::$homekey;
 		self::$pages[ $slug ] = $page;
 	}
 	
